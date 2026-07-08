@@ -120,18 +120,18 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
           <img src={nippon} />
 
           {/* Right: Date Badge */}
-          <div className="flex flex-col items-center text-center md:items-end md:text-right">
-            <h2 className="font-serif text-2xl font-black text-stone-900 md:text-3xl tracking-tight leading-none">
+          <div className="flex text-[#BA9155] flex-col items-center text-center md:items-end md:text-right">
+            <h2 className="text-2xl font-black md:text-3xl tracking-tight leading-none">
               17, 18 e 19 de julho
             </h2>
-            <p className="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-[#c93b2b]">
+            <p className="mt-1 font-sans text-xs font-bold uppercase tracking-widest">
               UCENS / Nippon Sorocaba
             </p>
-            <p className="font-sans text-[11px] font-semibold text-stone-500 tracking-wider mt-0.5">
+            <p className="font-sans text-[11px] font-semibold tracking-wider mt-0.5">
               Unidade Campo II / Sede Campestre II
             </p>
             
-            <div className="mt-3 inline-flex items-center space-x-1.5 rounded-full bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-dark">
+            <div className="mt-3 inline-flex items-center space-x-1.5 rounded-full bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
               <Calendar className="h-3 w-3" />
               <span>Sorocaba - SP</span>
             </div>
