@@ -6,6 +6,8 @@
 import React from 'react';
 import { MapPin, Calendar, Compass, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import logo  from '../assets/nippon-sorocaba.png';
+import nippon  from '../assets/logo.png';
 
 interface HeroSectionProps {
   aerialImagePath: string;
@@ -112,13 +114,10 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:items-center border-b border-gold/10 pb-10">
           {/* Left: Nippon Sorocaba Tênis Logo */}
           <div className="flex justify-center md:justify-start">
-            <NipponTennisLogo />
+            <img src={logo} />
           </div>
 
-          {/* Center: Torii 11º Intercolonial Logo */}
-          <div className="flex justify-center">
-            <ToriiIntercolonialLogo />
-          </div>
+          <img src={nippon} />
 
           {/* Right: Date Badge */}
           <div className="flex flex-col items-center text-center md:items-end md:text-right">
