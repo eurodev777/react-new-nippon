@@ -4,33 +4,54 @@
  */
 
 import { Sponsor, Supporter, Director } from './types';
+import mcamicado from './assets/patrocinadores/1.jpg'
+import hala from './assets/patrocinadores/2.jpg'
+import unica from './assets/patrocinadores/4.jpg'
+import ito from './assets/patrocinadores/3.jpg'
+import sicredi from './assets/apoio/sicredi.jpg'
+import bwm from './assets/apoio/bwm.jpg'
+import dai from './assets/apoio/dai.jpg'
+import maxxi from './assets/apoio/maxxi.jpg'
+import jadlog from './assets/apoio/jadlog.jpg'
+import mr from './assets/apoio/mr.jpg'
+import ideal from './assets/apoio/ideal.jpg'
+import h20 from './assets/apoio/h20.jpg'
+import simus from './assets/apoio/simus.jpg'
+import shibata from './assets/apoio/shibata.jpg'
+import katia from './assets/apoio/katia.jpg'
+import prosteel from './assets/apoio/prosteel.jpg'
+import tammy from './assets/apoio/tammy.jpg'
+import outlabel from './assets/apoio/outlabel.jpg'
+import classicpan from './assets/apoio/classicpan.jpg'
+import dr from './assets/apoio/dr.jpg'
+import mira from './assets/apoio/mira.jpg'
+import tadao from './assets/apoio/tadao.jpg'
 
-export const SPONSORS: Sponsor[] = [
+export const SPONSORS = [
   {
     id: 'm-camicado',
     name: 'M.Camicado',
     logoType: 'text',
-    logoText: 'M.CAMICADO',
+    logoText: mcamicado,
     tagline: 'TRADIÇÃO EM PREÇOS BAIXOS',
     siteUrl: 'https://www.mcamicado.com.br',
     instagram: 'mcamicado',
-    whatsapp: '+5515991234567',
-    phone: '(15) 3211-1234',
+    whatsapp: '+551133127676',
+    phone: '(11) 3312-7676',
     description: 'A M.Camicado é sinônimo de tradição e economia em Sorocaba e região. Oferecemos uma linha completa de utilidades domésticas, presentes, decoração, brinquedos e artigos para o lar com o melhor preço garantido.',
     bgColor: 'bg-[#D2143A]',
     textColor: 'text-white'
   },
   {
     id: 'hala',
-    name: 'HALA Engenharia',
+    name: 'HALA SOLUÇÕES',
     logoType: 'text',
-    logoText: 'HALA',
-    tagline: 'SOLUÇÕES ENGENHARIA',
-    siteUrl: 'https://www.halaengenharia.com.br',
-    instagram: 'halaengenharia',
-    whatsapp: '+5515997654321',
-    phone: '(15) 3033-9876',
-    description: 'A HALA Soluções Engenharia atua no desenvolvimento de projetos de engenharia civil, reformas de alto padrão, gerenciamento de obras residenciais e comerciais, entregando máxima eficiência e excelência técnica.',
+    logoText: hala,
+    tagline: 'Especialistas em oferecer soluções de engenharia',
+    siteUrl: 'https://www.halasolucoes.com.br',
+    instagram: 'halasolucoes',
+    facebook: 'halasolucoes',
+    description: 'Empresa focada em projetos, obras e manutenções diversas nas áreas de Engenharia Elétrica, Civil e Mecânica. Conta com um corpo técnico experiente e capacitado, que entrega resutados com alto padrão de qualidade, segurança e excelência.',
     bgColor: 'bg-white',
     textColor: 'text-[#1E1B4B]'
   },
@@ -38,13 +59,12 @@ export const SPONSORS: Sponsor[] = [
     id: 'grupo-unica',
     name: 'Grupo Unica',
     logoType: 'text',
-    logoText: 'UNICA',
-    tagline: 'Porque sua família e patrimônio são únicos.',
+    logoText: unica,
+    tagline: 'há mais de 20 anos protegendo sua família e seu patrimônio',
     siteUrl: 'https://www.grupounica.com.br',
-    instagram: 'grupounica',
-    whatsapp: '+5515991223344',
-    phone: '(15) 3224-5566',
-    description: 'O Grupo Unica é líder em soluções de segurança privada, portaria remota, monitoramento eletrônico, vigilância patrimonial e terceirização de serviços integrados (facilities) com alta tecnologia.',
+    instagram: 'grupounicaseguranca',
+    facebook: 'grupounica_sorocaba',
+    description: 'O Grupo Única conquistou seu espaço através da prestação de serviços de qualidade voltados integralmente à satisfação de seus clientes. Atuamos nas áreas de Segurança Patrimonial, Segurança Eletrônica e Facilities.',
     bgColor: 'bg-[#005CA9]',
     textColor: 'text-white'
   },
@@ -52,225 +72,183 @@ export const SPONSORS: Sponsor[] = [
     id: 'ito',
     name: 'ITO',
     logoType: 'text',
-    logoText: 'ITO',
+    logoText: ito,
     tagline: 'MATERIAIS PARA CONSTRUÇÃO',
-    siteUrl: 'https://www.itomateriais.com.br',
+    siteUrl: 'https://www.itomat.com.br',
     instagram: 'itomateriais',
-    whatsapp: '+5515998887766',
-    phone: '(15) 3232-1100',
-    description: 'A ITO Materiais para Construção fornece do básico ao acabamento para obras e reformas de todos os portes. Reconhecida pelo atendimento consultivo e agilidade na entrega em Sorocaba.',
+    whatsapp: '+5511996192659',
+    phone: '(15) 3231-6151',
+    description: 'Sua melhor opção em loja de materiais para construção em Sorocaba. Com mais de 10.000 produtos divididos em diversos departamentos, aqui você encontra tudo para sua obra, podendo contar com as melhores e mais variadas marcas e modelos de materiais para construção disponíveis no mercado.',
     bgColor: 'bg-[#F2A900]',
     textColor: 'text-[#1C1917]'
   }
 ];
 
-export const SUPPORTERS: Supporter[] = [
+export const SUPPORTERS = [
   {
     id: 'sicredi',
     name: 'Sicredi',
     logoType: 'text',
-    logoText: 'Sicredi',
+    logoText: sicredi,
     siteUrl: 'https://www.sicredi.com.br',
-    instagram: 'sicredi',
-    whatsapp: '+5515991001122',
-    phone: '(15) 3229-4400',
-    description: 'Sicredi é a primeira instituição financeira cooperativa do Brasil. Oferecemos soluções financeiras completas para você, sua empresa e seu agronegócio, gerando crescimento para toda a comunidade.'
   },
   {
     id: 'bwm',
     name: 'BWM',
     logoType: 'text',
-    logoText: 'BWM',
-    tagline: 'Propaganda',
-    siteUrl: 'https://www.bwm.com.br',
-    instagram: 'bwmpropaganda',
-    whatsapp: '+5515991231122',
-    phone: '(15) 3233-4455',
-    description: 'A BWM é uma agência de publicidade estratégica focada em posicionamento de marcas, campanhas de alto impacto, marketing digital e desenvolvimento de identidades corporativas sólidas.'
+    logoText: bwm,
+    description: 'RESIDENCIAIS - COMERCIAIS - INVESTIMENTOS - LANÇAMENTOS'
   },
   {
     id: 'dai',
     name: 'Dai Cervejaria',
     logoType: 'text',
-    logoText: 'Dai',
-    tagline: 'Cervejaria',
-    siteUrl: 'https://www.daicervejaria.com.br',
-    instagram: 'daicervejaria',
-    whatsapp: '+5515991445566',
-    phone: '(15) 3234-7788',
-    description: 'Dai Cervejaria traz o melhor do chopp e cervejas artesanais selecionadas para eventos, festivais e consumo local, garantindo frescor e sabor único para confraternizações.'
+    logoText: dai,
+    tagline: 'Alimentos',
+    instagram: 'daialimentos',
+    facebook: 'daialimentos',
+    whatsapp: '+551120190909',
+    description: 'Mais sabor à sua vida...'
   },
   {
     id: 'maxxi-ovos',
     name: 'Maxxi Ovos',
     logoType: 'text',
-    logoText: 'Maxxi Ovos',
+    logoText: maxxi,
     siteUrl: 'https://www.maxxiovos.com.br',
     instagram: 'maxxiovos',
-    whatsapp: '+5511988889999',
-    phone: '(11) 4004-2020',
-    description: 'A Maxxi Ovos é pioneira na produção de ovos pasteurizados (líquidos e desidratados) de altíssima qualidade, fornecendo praticidade e segurança biológica para padarias, indústrias e cozinhas.'
+    description: 'Mais sabor e praticidade para uma vida saudável.'
   },
   {
     id: 'jadlog',
     name: 'Jadlog',
     logoType: 'text',
-    logoText: 'jadlog',
-    siteUrl: 'https://www.jadlog.com.br',
-    instagram: 'jadlog_oficial',
-    whatsapp: '+5511987654321',
-    phone: '0800-704-5620',
-    description: 'A Jadlog é uma das maiores redes de transporte de cargas expressas e entregas fracionadas do Brasil, sendo a parceira logística preferida dos principais e-commerces nacionais.'
+    logoText: jadlog,
+    whatsapp: '+551532333280',
+    phone: '(15) 3233-3280',
+    description: 'tat.sor@jadlog.com.br'
   },
   {
     id: 'mr-jeff',
     name: 'Mr Jeff',
     logoType: 'text',
-    logoText: 'mr jeff',
-    siteUrl: 'https://jeff.com/br/mrjeff',
-    instagram: 'mrjeff_sorocaba',
-    whatsapp: '+5515991228899',
-    phone: '(15) 3211-5500',
-    description: 'Mr Jeff é o serviço revolucionário de lavanderia e passadoria via aplicativo de celular. Coletamos suas roupas em casa e as devolvemos limpas, passadas e dobradas em até 48 horas.'
+    logoText: mr,
+    instagram: 'mrjeffeventos',
+    whatsapp: '+5515998267418',
+    description: 'Há mais de 10 anos no mercado sendo referência em eventos em Sorocaba e Região.'
   },
   {
     id: 'ideal-seguros',
     name: 'Ideal Seguros',
     logoType: 'text',
-    logoText: 'Ideal Seguros',
+    logoText: ideal,
     tagline: 'FONE: (15) 3219-3500',
-    siteUrl: 'https://www.idealseguros.com.br',
-    instagram: 'idealseguros',
-    whatsapp: '+5515997623500',
+    instagram: '@idealsegurossorocaba',
+    whatsapp: '+5515998414953',
     phone: '(15) 3219-3500',
-    description: 'A Ideal Seguros oferece consultoria personalizada na contratação de seguros residenciais, de automóveis, corporativos e de vida, trabalhando com as maiores seguradoras do país para sua total tranquilidade.'
+    description: 'Nós temos a melhor proposta 30 anos fazendo o melhor por você!'
   },
   {
     id: 'm0-ambiental',
     name: 'Grupo M0 Ambiental',
     logoType: 'text',
-    logoText: 'Grupo M0 Ambiental',
-    siteUrl: 'https://www.m0ambiental.com.br',
-    instagram: 'm0ambiental',
-    whatsapp: '+5515991337788',
-    phone: '(15) 3222-1122',
-    description: 'O Grupo M0 Ambiental presta assessoria técnica em licenciamento ambiental, gestão de resíduos sólidos, outorgas de água e projetos sustentáveis para indústrias e empreendimentos.'
+    logoText: h20,
+    instagram: '@grupoh2oambiental2',
+    whatsapp: '+5515998609777',
+    description: 'a solução completa para o seu projeto!'
   },
   {
     id: 'simus',
     name: 'Simus Carnes',
     logoType: 'text',
-    logoText: 'SIMUS',
+    logoText: simus,
     tagline: 'A CASA DA CARNE',
-    siteUrl: 'https://www.casasimus.com.br',
-    instagram: 'casasimus',
-    whatsapp: '+5515991112222',
-    phone: '(15) 3221-8888',
-    description: 'O Simus (A Casa da Carne) é referência em Sorocaba para carnes nobres, cortes especiais para churrasco e atendimento de açougue tradicional de altíssima higiene e procedência selecionada.'
+    instagram: 'simuscarnes',
+    whatsapp: '+5515997305088',
+    phone: '(15) 3221-9095',
+    description: 'Mais sabor para sua mesa!'
   },
   {
     id: 'shibata',
-    name: 'Shibata Supermercados',
+    name: 'Shibata Quitanda',
     logoType: 'text',
-    logoText: 'shibata',
+    logoText: shibata,
     tagline: 'quitanda',
-    siteUrl: 'https://www.shibata.com.br',
-    instagram: 'shibatasupermercados',
-    whatsapp: '+5512996543210',
-    phone: '(12) 3946-1234',
-    description: 'A rede Shibata Supermercados atende com carinho e variedade incrível de hortifruti fresco, quitanda, importados exclusivos e culinária japonesa típica de alta qualidade.'
+    facebook: 'quitandasantarosalia',
+    whatsapp: '+5515992014621',
+    phone: '(15) 3231-8214',
+    description: 'Desde 1981'
   },
   {
     id: 'katia-mayumi',
     name: 'Katia Mayumi',
     logoType: 'text',
-    logoText: 'KATIA MAYUMI',
-    siteUrl: 'https://www.katiamayumi.com.br',
+    logoText: katia,
     instagram: 'katia_mayumi_tenis',
-    whatsapp: '+5515997776655',
-    phone: '(15) 3212-3456',
-    description: 'Katia Mayumi oferece assessoria personalizada e artigos esportivos especializados para tenistas, com curadoria de marcas e acessórios de performance.'
+    whatsapp: '+5515991760021',
+    description: 'Orientação para Postura - Quick Massage'
   },
   {
     id: 'prosteel',
     name: 'Prosteel',
     logoType: 'text',
-    logoText: 'PROSTEEL',
-    tagline: 'Serviços Médicos e Caldeiraria',
-    siteUrl: 'https://www.prosteel.com.br',
-    instagram: 'prosteel_ind',
-    whatsapp: '+5515998123456',
-    phone: '(15) 3034-5500',
-    description: 'A Prosteel atua na fabricação de estruturas metálicas pesadas, serviços especializados de caldeiraria industrial, além de possuir uma divisão dedicada de serviços e suporte médico empresarial.'
+    logoText: prosteel,
+    tagline: 'Estruturas Metálicas e Calderaria',
+    description: 'prosteelsorocaba@bol.com.br'
   },
   {
     id: 'tammy',
-    name: 'Tammy Calçados',
+    name: 'O Verdadeiro pastel Tammy',
     logoType: 'text',
-    logoText: 'Tammy',
-    siteUrl: 'https://www.tammy.com.br',
-    instagram: 'tammy_calcados',
-    whatsapp: '+5515991238877',
-    phone: '(15) 3232-4455',
-    description: 'A Tammy Calçados é a loja favorita da família em Sorocaba. Oferecemos as melhores marcas de calçados casuais, esportivos, femininos, masculinos e infantis com atendimento caloroso.'
+    logoText: tammy,
+    siteUrl: 'linktr.ee/tammypastelaria',
+    instagram: 'tammypastelaria',
+    description: 'O Verdadeiro Pastel Desde 1977'
   },
   {
     id: 'label-packing',
-    name: 'Label Packing',
+    name: 'OUTLABEL',
     logoType: 'text',
-    logoText: 'LABEL PACKING',
-    siteUrl: 'https://www.labelpacking.com.br',
-    instagram: 'labelpacking',
-    whatsapp: '+5515997889900',
-    phone: '(15) 3228-5500',
-    description: 'A Label Packing desenvolve e fabrica rótulos adesivos, etiquetas personalizadas, fitas de arquivamento e embalagens flexíveis de altíssima durabilidade para os setores farmacêutico, alimentício e industrial.'
+    logoText: outlabel,
+    siteUrl: 'https://www.outlabel.com.br',
+    instagram: 'outlabel',
+    description: 'OUTLABEL Rótulos e Bisnagas'
   },
   {
     id: 'classic-pan',
     name: 'Classic Pan',
     logoType: 'text',
-    logoText: 'classic pan',
-    siteUrl: 'https://www.classicpan.com.br',
-    instagram: 'classicpan_padaria',
-    whatsapp: '+5515991230099',
-    phone: '(15) 3211-2233',
-    description: 'A Padaria e Confeitaria Classic Pan é o ponto de encontro perfeito em Sorocaba para pães artesanais frescos, buffet de café da manhã completo, doces finos paulistas e salgados irresistíveis.'
+    logoText: classicpan,
+    description: 'Sinta o gosto dos clássicos - ClassicPan na 105,9 FM.'
   },
   {
     id: 'celso-amamura',
     name: 'Dr. Celso Amamura',
     logoType: 'text',
-    logoText: 'DR. CELSO AMAMURA',
+    logoText: dr,
     tagline: 'Oftalmologista',
     siteUrl: 'https://www.amuramed.com.br',
     instagram: 'dr_celso_amamura',
-    whatsapp: '+5515991556677',
-    phone: '(15) 3212-7788',
-    description: 'O Dr. Celso Amamura é médico oftalmologista especialista de renome em Sorocaba, prestando atendimento clínico, cirúrgico e de exames avançados para garantir a saúde perfeita de seus olhos.'
+    phone: '(15) 3234-2942',
+    description: 'Doe seus olhos'
   },
   {
     id: 'mira',
     name: 'Mira',
     logoType: 'text',
-    logoText: 'mira',
-    tagline: 'Assessoria e Cobrança',
-    siteUrl: 'https://www.miracobranca.com.br',
-    instagram: 'mira_assessoria',
-    whatsapp: '+5515991332211',
-    phone: '(15) 3219-8800',
-    description: 'A Mira Assessoria e Cobrança oferece soluções corporativas completas para recuperação de crédito, negociação amigável de débitos e inteligência financeira para redução de inadimplência.'
+    logoText: mira,
+    tagline: 'Manutenções e Vistorias Imobiliárias',
+    whatsapp: '+5515997784221',
+    description: 'QUALIDADE E PREÇO JUSTO'
   },
   {
     id: 'tadao-takeda',
     name: 'Tadao Takeda',
     logoType: 'text',
-    logoText: 'Tadao Takeda',
-    tagline: 'TÊNIS E CORDAS',
-    siteUrl: 'https://www.tadaotakeda.com.br',
-    instagram: 'tadao_takeda',
-    whatsapp: '+5515997123456',
-    phone: '(15) 3012-9900',
-    description: 'Tadao Takeda é a autoridade máxima em encordoamento profissional de raquetes na região. Oferece as melhores marcas de cordas, raquetes, overgrips e acessórios com calibragem de precisão técnica.'
+    logoText: tadao,
+    tagline: 'FOTOS E VÍDEOS',
+    instagram: 'takeda_tadao',
+    whatsapp: '+5511993095120',
   }
 ];
 

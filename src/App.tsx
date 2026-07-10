@@ -15,7 +15,7 @@ import { Sponsor, Supporter } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Exact path from generated image output
-const AERIAL_IMAGE_PATH = '/src/assets/images/aerial_tennis_courts_1783534364403.jpg';
+const AERIAL_IMAGE_PATH = '/src/assets/drone.jpg';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'regulamento'>('home');

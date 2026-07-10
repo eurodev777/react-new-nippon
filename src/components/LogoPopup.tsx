@@ -4,16 +4,10 @@
  */
 
 import React from 'react';
-import { X, Globe, Instagram, MessageSquare, Phone, Check, Copy } from 'lucide-react';
-import { Sponsor, Supporter } from '../types';
+import { X, Globe, Instagram, MessageSquare, Phone, Check, Copy, Facebook } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-interface LogoPopupProps {
-  item: Sponsor | Supporter | null;
-  onClose: () => void;
-}
-
-export default function LogoPopup({ item, onClose }: LogoPopupProps) {
+export default function LogoPopup({ item, onClose }) {
   const [copiedText, setCopiedText] = React.useState<string | null>(null);
 
   if (!item) return null;
@@ -21,13 +15,14 @@ export default function LogoPopup({ item, onClose }: LogoPopupProps) {
   const isSponsor = 'bgColor' in item;
 
   // Generate generic links
-  const siteUrl = item.siteUrl;
-  const instaUrl = `https://instagram.com/${item.instagram || 'nippon_sorocaba'}`;
+  const siteUrl = item.siteUrl ? item.siteUrl : null;
+  const instaUrl = item.instagram ? `https://instagram.com/${item.instagram}` : null;
+  const faceUrl = item.facebook ? `https://facebook.com/${item.facebook}` : null;
   const whatsappMsg = encodeURIComponent(
     `Olá! Encontrei o contato de vocês no portal do 11º Torneio Intercolonial de Tênis Nippon Sorocaba.`
   );
-  const whatsappUrl = `https://wa.me/${item.whatsapp.replace(/[^0-9]/g, '')}?text=${whatsappMsg}`;
-  const phoneUrl = `tel:${item.phone.replace(/[^0-9]/g, '')}`;
+  const whatsappUrl = item.whatsapp ? `https://wa.me/${item.whatsapp.replace(/[^0-9]/g, '')}?text=${whatsappMsg}` : null;
+  const phoneUrl = item.phone ? `tel:${item.phone.replace(/[^0-9]/g, '')}` : null;
 
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
@@ -112,7 +107,7 @@ export default function LogoPopup({ item, onClose }: LogoPopupProps) {
                   <Globe className="h-4.5 w-4.5 text-stone-400" />
                   <div className="flex flex-col min-w-0">
                     <span className="text-[10px] font-bold text-stone-400 uppercase tracking-tight">Website</span>
-                    <span className="text-xs font-semibold truncate">Acessar site</span>
+                    <span className="text-xs font-semibold truncate">{item.siteUrl}</span>
                   </div>
                 </a>
 
@@ -126,7 +121,22 @@ export default function LogoPopup({ item, onClose }: LogoPopupProps) {
                   <Instagram className="h-4.5 w-4.5 text-stone-400" />
                   <div className="flex flex-col min-w-0">
                     <span className="text-[10px] font-bold text-stone-400 uppercase tracking-tight">Instagram</span>
-                    <span className="text-xs font-semibold truncate">@{item.instagram || 'nippon'}</span>
+                    <span className="text-xs font-semibold truncate">@{item.instagram}</span>
+                  </div>
+                </a>
+
+                
+                {/* Instagram */}
+                <a
+                  href={faceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2.5 rounded-xl border border-stone-100 bg-stone-50 p-3 text-stone-700 transition hover:border-[#E1306C]/30 hover:bg-[#E1306C]/5 hover:text-[#E1306C]"
+                >
+                  <Facebook className="h-4.5 w-4.5 text-stone-400" />
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-[10px] font-bold text-stone-400 uppercase tracking-tight">Facebook</span>
+                    <span className="text-xs font-semibold truncate">{item.facebook || null}</span>
                   </div>
                 </a>
 
@@ -140,7 +150,7 @@ export default function LogoPopup({ item, onClose }: LogoPopupProps) {
                   <MessageSquare className="h-4.5 w-4.5 text-stone-400" />
                   <div className="flex flex-col min-w-0">
                     <span className="text-[10px] font-bold text-stone-400 uppercase tracking-tight">WhatsApp</span>
-                    <span className="text-xs font-semibold truncate">Enviar Mensagem</span>
+                    <span className="text-xs font-semibold truncate">{item.whatsapp}</span>
                   </div>
                 </a>
 

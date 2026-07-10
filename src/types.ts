@@ -11,6 +11,7 @@ export interface Sponsor {
   tagline?: string;
   siteUrl: string;
   instagram: string;
+  facebook: string;
   whatsapp: string;
   phone: string;
   description: string;

@@ -18,36 +18,6 @@ export default function Sponsors({ onSelectItem }: SponsorsProps) {
   return (
     <section className="bg-[#FCFAF2] py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20">
-        
-        {/* PATROCÍNIO (Sponsors) Section */}
-        <div id="patrocinio" className="space-y-8 scroll-mt-20">
-          <div className="text-center">
-            <div className="flex justify-center mb-2">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold-dark">
-                <Award className="h-4.5 w-4.5" />
-              </span>
-            </div>
-            <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-              Apoio de Elite
-            </h2>
-            <h3 className="mt-1 font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
-              PATROCÍNIO
-            </h3>
-            <p className="mt-2 text-xs font-medium text-stone-500 max-w-md mx-auto">
-              Clique nos logotipos abaixo para visualizar informações de contato, redes sociais, WhatsApp e site de nossos patrocinadores oficiais.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-            {SPONSORS.map((sponsor) => (
-              <SponsorCard
-                key={sponsor.id}
-                sponsor={sponsor}
-                onClick={(s) => onSelectItem(s)}
-              />
-            ))}
-          </div>
-        </div>
 
         {/* APOIO (Supporters) Section */}
         <div id="apoio" className="space-y-8 scroll-mt-20">
@@ -57,14 +27,11 @@ export default function Sponsors({ onSelectItem }: SponsorsProps) {
                 <Heart className="h-4.5 w-4.5" />
               </span>
             </div>
-            <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#c93b2b]">
-              Parceiros do Esporte
-            </h2>
             <h3 className="mt-1 font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
               APOIO
             </h3>
             <p className="mt-2 text-xs font-medium text-stone-500 max-w-md mx-auto">
-              Grandes marcas e profissionais que tornam este torneio possível. Clique para detalhes e contatos diretos.
+              Clique para detalhes e contatos diretos.
             </p>
           </div>
 
@@ -85,6 +52,33 @@ export default function Sponsors({ onSelectItem }: SponsorsProps) {
             <div className="hidden lg:flex h-20 items-center justify-center rounded-xl border border-dashed border-stone-200 bg-stone-50/20 text-stone-300 font-serif italic text-xs">
               Espaço Disponível
             </div>
+          </div>
+        </div>
+
+                {/* PATROCÍNIO (Sponsors) Section */}
+                <div id="patrocinio" className="space-y-8 scroll-mt-20">
+          <div className="text-center">
+            <div className="flex justify-center mb-2">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold-dark">
+                <Award className="h-4.5 w-4.5" />
+              </span>
+            </div>
+            <h3 className="mt-1 font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
+              PATROCÍNIO
+            </h3>
+            <p className="mt-2 text-xs font-medium text-stone-500 max-w-md mx-auto">
+              Clique nos logotipos abaixo para visualizar informações.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-6xl mx-auto">
+            {SPONSORS.map((sponsor) => (
+              <SponsorCard
+                key={sponsor.id}
+                sponsor={sponsor}
+                onClick={(s) => onSelectItem(s)}
+              />
+            ))}
           </div>
         </div>
 

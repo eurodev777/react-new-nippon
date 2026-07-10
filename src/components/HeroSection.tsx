@@ -187,7 +187,7 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
             </div>
 
             {/* Quick Details List */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl border border-stone-200 bg-white/70 p-4">
                 <span className="text-[10px] font-bold tracking-widest uppercase text-stone-400 block">Formato</span>
                 <span className="text-xs font-extrabold text-stone-800 block mt-0.5">Equipes (Masc / Fem)</span>
@@ -208,7 +208,7 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
                 <span className="text-xs font-extrabold text-[#c93b2b] block mt-0.5">R$ 300,00 por Atleta</span>
                 <span className="text-[10px] text-stone-500 block mt-0.5">Inclui Almoço</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Aerial Photo Block (6 cols) */}
