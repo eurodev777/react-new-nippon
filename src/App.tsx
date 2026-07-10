@@ -15,6 +15,11 @@ import { Sponsor, Supporter } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 import RelacaoAtletasPageProps from './components/RelacaoAtletasPageProps';
 import TabelasPage from './components/TabelasPage';
+import chave1 from './assets/1.png'
+import chave2 from './assets/2.png'
+import chave3 from './assets/3.png'
+import chave4 from './assets/4.png'
+import chave5 from './assets/5.png'
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = '/src/assets/drone.jpg';
@@ -93,7 +98,14 @@ export default function App() {
               transition={{ duration: 0.3 }}
               className="bg-[#FCFAF2] min-h-[80vh]"
             >
-              <TabelasPage onBack={() => setCurrentPage('home')} />
+              {/* <TabelasPage onBack={() => setCurrentPage('home')} /> */}
+              <div className="flex flex-col gap-6 items-center justify-center h-auto">
+                <img src={chave1} />
+                <img src={chave2} />
+                <img src={chave3} />
+                <img src={chave4} />
+                <img src={chave5} />
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

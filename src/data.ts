@@ -26,6 +26,7 @@ import classicpan from './assets/apoio/classicpan.jpg'
 import dr from './assets/apoio/dr.jpg'
 import mira from './assets/apoio/mira.jpg'
 import tadao from './assets/apoio/tadao.jpg'
+import sothink from './assets/apoio/sothink.png'
 import mt from './assets/diretoria/1.jpg'
 import ic from './assets/diretoria/2.jpg'
 import st from './assets/diretoria/3.jpg'
@@ -41,6 +42,7 @@ import alice from './assets/expositores/alice.png'
 import brilho from './assets/expositores/brilho.jpg'
 import longway from './assets/expositores/longway.png'
 import brahma from './assets/expositores/brahma.png'
+import { describe } from 'node:test';
 
 // Adicione isso ao seu arquivo data.ts (ou onde você guarda SPONSORS e SUPPORTERS)
 
@@ -329,6 +331,19 @@ export const SUPPORTERS = [
     tagline: 'FOTOS E VÍDEOS',
     instagram: 'takeda_tadao',
     whatsapp: '+5511993095120',
+  },
+  {
+    id: 'sothink',
+    name: 'Sothink Marketing',
+    logoType: 'text',
+    logoText: sothink,
+    tagline: 'agência de marketing',
+    siteUrl: 'https://sothink.com.br',
+    instagram: 'sothink.mkt',
+    facebook: 'profile.php?id=61562262162613',
+    whatsapp: '+5515997442108',
+    phone: '(15) 99744-2108',
+    description: 'Na Sothink, cada projeto começa com uma análise estratégica das áreas da empresa. A partir desse diagnóstico, oferecemos soluções personalizadas, alinhadas às necessidades específicas de cada cliente — afinal, cada negócio é único e vive realidades diferentes.',
   }
 ];
 
