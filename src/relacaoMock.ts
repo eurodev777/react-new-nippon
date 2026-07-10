@@ -359,7 +359,7 @@ export const relacaoMock = {
           ],
         },
         {
-          nome: "VGP MUNDO ANIMAL II",
+          nome: "SÃO JOSÉ DOS CAMPOS II",
           atletas: [
             "Wilson Ogata (C)",
             "Renato Tamashiro",
@@ -380,7 +380,7 @@ export const relacaoMock = {
           ],
         },
         {
-          nome: "SÃO JOSÉ DOS CAMPOS II",
+          nome: "VGP MUNDO ANIMAL II",
           atletas: [
             "Rafael Koiti Kotama Hosoe (C)",
             "Julio Henrique Favarim Oliveira",

@@ -81,12 +81,12 @@ export default function RegulamentoPage({ onBack }: RegulamentoPageProps) {
         title: 'Sistemática das Chaves',
         icon: Hash,
         items: [
-          { label: 'Categoria Ouro Masculino (5 equipes)', text: 'Primeira rodada por sorteio (Campeões e Vice anteriores não se enfrentam nesta rodada). Vencedores disputam Chave Principal (Grupo de 3, Round Robin). Perdedores disputam Chave Repescagem (Grupo de 3, Round Robin). Os 2 melhores da Principal serão Campeão e Vice. O melhor da Repescagem será o Campeão da Repescagem. Jogos Principal: melhor de 3 Sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad.' },
-          { label: 'Critérios de Classificação (Ouro Masculino e Feminino)', text: 'Confronto direto; Saldo de Vitórias; Saldo de Sets; Saldo de Games (sem pontos do 3º set); Saldo de Pontos no 3º Set; Sorteio. Obs: A equipe com pior desempenho poderá disputar a Categoria Prata na próxima edição.' },
+          { label: 'Categoria Ouro Masculino (5 equipes)', text: 'Os confrontos Primeira Rodada serão definidos através de Sorteio. Na Primeira Rodada, as Equipes terão 2 confrontos cada, definidos por sorteio. As equipes que tiverem os 2 melhores resultados, disputarão a Final Principal. As equipes que tiverem o terceiro e quarto melhor resultado, disputarão a Final da Repescagem. Jogos Principal e Final; melhor de 3 Sets, No-Ad. Final da Repescagem: Set-Pro até 8, No-Ad.' },
+          { label: 'Critérios de Classificação (Ouro Masculino e Feminino)', text: 'Saldo de Vitórias; Saldo de Sets; Saldo de Games (sem pontos do 3º set); Saldo de Pontos no 3º set (caso aplicável); Sorteio. Obs: A equipe com pior desempenho poderá disputar a Categoria Prata na próxima edição.' },
           { label: 'Categoria Prata Masculino (8 equipes)', text: 'Primeira rodada por Sorteio. Vencedores do primeiro confronto disputam Chave Principal e os perdedores disputam Chave Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão promove para Ouro. Piores 2 disputam Bronze na próxima edição.' },
           { label: 'Categoria Bronze Masculino (12 equipes)', text: 'Primeira rodada por Sorteio. Chave com 4 cabeças de chave, que também por sorteio enfrentam vencedores da Primeira Rodada. Perdedores disputam Repescagem junto com perdedores da Primeira Rodada. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão e Vice promovem para Prata. Piores 2 podem ir para Qualifying.' },
-          { label: 'Categoria Ouro Feminino (5 equipes)', text: 'Primeira rodada por sorteio (Top 2 anteriores não se enfrentam na rodada 1). Vencedoras disputam Chave Principal (Grupo de 3, Round Robin). Perdedoras disputam Repescagem (Grupo de 3, Round Robin). Top 2 da Principal serão Campeã e Vice. Melhor da Repescagem será Campeã da Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad.' },
-          { label: 'Categoria Prata Feminino (5 equipes)', text: 'Primeira rodada por sorteio (Top 2 anteriores não se enfrentam na rodada 1). Vencedoras disputam Chave Principal (Grupo de 3, Round Robin). Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeã promove para Ouro.' }
+          { label: 'Categoria Ouro Feminino (6 equipes)', text: 'Primeira rodada por sorteio (Top 2 anteriores não se enfrentam na rodada 1). Vencedoras disputam Chave Principal (Grupo de 3, Round Robin). Perdedoras disputam Repescagem (Grupo de 3, Round Robin). Top 2 da Principal serão Campeã e Vice. Melhor da Repescagem será Campeã da Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad.' },
+          { label: 'Primeira rodada por Sorteio. Vencedores do primeiro confronto disputam Chave Principal e os perdedores disputam Chave Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão promove para Ouro. Piores 2 podem disputar Qualifying para a próxima edição.' }
         ]
       },
       {
@@ -95,7 +95,7 @@ export default function RegulamentoPage({ onBack }: RegulamentoPageProps) {
         icon: Award,
         items: [
           { label: 'Premiação', text: 'Troféus para as equipes Campeã, Vice-Campeã e Campeã da Repescagem em todas as Categorias.' },
-          { label: 'Taxa de Inscrição', text: 'R$ 300,00 (Trezentos reais) por atleta, com direito ao almoço de encerramento (20 de Julho).' },
+          { label: 'Taxa de Inscrição', text: 'R$ 350,00 (Trezentos reais) por atleta, com direito ao almoço de encerramento (19 de Julho).' },
           { label: 'Direitos da Comissão', text: 'A Comissão se reserva ao direito de alterar o sistema de chaveamento, sistema dos jogos e horários, em caso de alterações no número de duplas participantes ou motivo de força maior.' },
           { label: 'Dúvidas e Penalidades', text: 'Qualquer dúvida sobre a aplicação e interpretação do regulamento, inclusive sobre a aplicação de penalidades, será resolvida pela Comissão Técnica e Disciplinar, cuja decisão será soberana e definitiva.' },
           { label: 'Casos Omissos', text: 'Os casos omissos no presente regulamento serão resolvidos pela Comissão Organizadora.' },
