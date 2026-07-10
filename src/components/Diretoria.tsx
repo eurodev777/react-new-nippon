@@ -41,7 +41,7 @@ export default function Diretoria() {
             Conselho & Liderança
           </h2>
           <h3 className="mt-2 font-serif text-3xl font-extrabold text-stone-950 md:text-4xl tracking-tight leading-none">
-            Nova Diretoria do Departamento de Tênis 2026
+            Diretoria do Departamento de Tênis 2026
           </h3>
           <p className="mt-3 text-sm text-stone-500 max-w-xl mx-auto leading-relaxed">
             A comissão responsável pela organização, coordenação técnica e garantia de fair play ao longo de todo o 11º Intercolonial.

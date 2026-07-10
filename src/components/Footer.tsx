@@ -58,7 +58,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
 
           {/* Right: Canva attribution & Powered indicator */}
           <div className="text-center md:text-right flex items-center justify-center space-x-2 text-[10px] text-stone-500">
-            <span>Criado com o Canva</span>
+            <span>Desenvolvido por <a href="https://sothink.com.br/" target="_blank">Sothink Marketing</a></span>
             <span>•</span>
             <span className="hover:text-stone-400 font-bold transition">AI Studio</span>
           </div>
