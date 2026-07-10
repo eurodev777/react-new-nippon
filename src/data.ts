@@ -42,6 +42,8 @@ import alice from './assets/expositores/alice.png'
 import brilho from './assets/expositores/brilho.jpg'
 import longway from './assets/expositores/longway.png'
 import brahma from './assets/expositores/brahma.png'
+import picole from './assets/expositores/picole-joao.jpeg'
+
 import { describe } from 'node:test';
 
 // Adicione isso ao seu arquivo data.ts (ou onde você guarda SPONSORS e SUPPORTERS)
@@ -88,6 +90,11 @@ export const EXHIBITORS = [
     name: 'Brilho Raro',
     logoText: brilho,
   },
+  {
+    id: 'exp-picole-joao',
+    name: 'Picolé João',
+    logoText: picole,
+  }
 ];
 
 // 2. Array para os 3 patrocinadores ao lado do logo do Birugumi (parte de baixo)
