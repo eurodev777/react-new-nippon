@@ -26,6 +26,11 @@ import classicpan from './assets/apoio/classicpan.jpg'
 import dr from './assets/apoio/dr.jpg'
 import mira from './assets/apoio/mira.jpg'
 import tadao from './assets/apoio/tadao.jpg'
+import mt from './assets/diretoria/1.jpg'
+import ic from './assets/diretoria/2.jpg'
+import st from './assets/diretoria/3.jpg'
+import tk from './assets/diretoria/4.jpg'
+import rt from './assets/diretoria/5.jpg'
 
 export const SPONSORS = [
   {
@@ -257,30 +262,30 @@ export const DIRECTORS: Director[] = [
     id: 'milton',
     name: 'Milton Tsubaki',
     role: 'Diretor',
-    initials: 'MT'
+    initials: mt
   },
   {
     id: 'israel',
     name: 'Israel Costa Vale',
     role: 'Coordenador Social',
-    initials: 'IC'
+    initials: ic
   },
   {
     id: 'sergio',
     name: 'Sergio Takeda',
     role: 'Coordenador Técnico',
-    initials: 'ST'
+    initials: st
   },
   {
     id: 'tomoko',
     name: 'Tomoko Kanaschiro',
     role: 'Coordenadora de Comunicação',
-    initials: 'TK'
+    initials: tk
   },
   {
     id: 'raquel',
     name: 'Raquel Takeda',
     role: 'Coordenadora Financeira',
-    initials: 'RT'
+    initials: rt
   }
 ];

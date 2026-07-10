@@ -65,9 +65,7 @@ export default function Diretoria() {
                 {/* Custom Styled Avatar Card representing the headshot */}
                 <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-xl bg-stone-100 shadow-xs border-2 border-white">
                   <div className={`absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br ${avatarColor}`}>
-                    <span className="font-mono text-3xl font-black tracking-tighter">
-                      {director.initials}
-                    </span>
+                    <img src={director.initials} />
                     {/* Tiny subtle circular Japanese design element */}
                     <div className="absolute right-1 bottom-1 h-5 w-5 rounded-full border border-white/20 flex items-center justify-center">
                       <span className="text-[6px] font-bold opacity-60">印</span>
