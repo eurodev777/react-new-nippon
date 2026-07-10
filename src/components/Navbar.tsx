@@ -1,4 +1,4 @@
-// Navbar.tsx - VERSÃO SIMPLIFICADA
+// Navbar.tsx - VERSÃO COM "MENU" PARA MOBILE
 
 /**
  * @license
@@ -81,7 +81,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               }`}
             >
               <Calendar className="h-3.5 w-3.5" />
-              <span>Tabelas</span>
+              <span>Jogos</span>
             </button>
 
             {/* Botão REGULAMENTO */}
@@ -98,15 +98,25 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             </button>
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button com texto "MENU" */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-stone-500 hover:bg-gold/10 hover:text-stone-950 focus:outline-none"
+              className="inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider text-stone-700 hover:bg-gold/10 hover:text-stone-950 focus:outline-none transition-colors"
               aria-expanded="false"
             >
               <span className="sr-only">Abrir menu principal</span>
-              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              {isOpen ? (
+                <>
+                  <X className="h-5 w-5" />
+                  <span>FECHAR</span>
+                </>
+              ) : (
+                <>
+                  <Menu className="h-5 w-5" />
+                  <span>MENU</span>
+                </>
+              )}
             </button>
           </div>
         </div>
@@ -156,7 +166,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                 }`}
               >
                 <Calendar className="h-4 w-4" />
-                <span>Tabelas</span>
+                <span>Jogos</span>
               </button>
 
               {/* Botão REGULAMENTO (Mobile) */}

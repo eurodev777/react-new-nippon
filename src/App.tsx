@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import { Sponsor, Supporter } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 import RelacaoAtletasPageProps from './components/RelacaoAtletasPageProps';
+import TabelasPage from './components/TabelasPage';
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = '/src/assets/drone.jpg';
@@ -64,24 +65,37 @@ export default function App() {
             </motion.div>
           )}
           {currentPage === 'regulamento' && (
-        <motion.div key="regulamento" /* ...props do framer motion... */ className="bg-white min-h-[80vh]">
-          <RegulamentoPage onBack={() => setCurrentPage('home')} />
-        </motion.div>
-      )}
+            <motion.div key="regulamento" /* ...props do framer motion... */ className="bg-white min-h-[80vh]">
+              <RegulamentoPage onBack={() => setCurrentPage('home')} />
+            </motion.div>
+          )}
 
-      {/* NOVA PÁGINA AQUI */}
-      {currentPage === 'equipes' && (
-        <motion.div 
-          key="equipes"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 15 }}
-          transition={{ duration: 0.3 }}
-          className="bg-[#FCFAF2] min-h-[80vh]"
-        >
-          <RelacaoAtletasPageProps onBack={() => setCurrentPage('home')} />
-        </motion.div>
-      )}
+          {/* NOVA PÁGINA AQUI */}
+          {currentPage === 'equipes' && (
+            <motion.div
+              key="equipes"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#FCFAF2] min-h-[80vh]"
+            >
+              <RelacaoAtletasPageProps onBack={() => setCurrentPage('home')} />
+            </motion.div>
+          )}
+          {/* NOVA PÁGINA AQUI */}
+          {currentPage === 'tabelas' && (
+            <motion.div
+              key="tabelas"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#FCFAF2] min-h-[80vh]"
+            >
+              <TabelasPage onBack={() => setCurrentPage('home')} />
+            </motion.div>
+          )}
         </AnimatePresence>
       </main>
 
