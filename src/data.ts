@@ -364,3 +364,33 @@ export const DIRECTORS: Director[] = [
     initials: rt
   }
 ];
+
+export const tabelasMock = {
+  categorias: [
+    {
+      id: "ouro_masc",
+      nome: "Ouro Masculino",
+      jogos: [
+        { id: "JG.OM1", equipeA: "KOSMOS", equipeB: "M.CAMICADO", data: "17/JUL", hora: "15:30", fase: "Principal" },
+        { id: "JG.OM2", equipeA: "COOPER", equipeB: "SOROCABA II", data: "17/JUL", hora: "15:30", fase: "Principal" },
+        { id: "JG.OM3", equipeA: "SOROCABA I", equipeB: "KOSMOS", data: "18/JUL", hora: "07:00", fase: "Principal" }
+      ]
+    },
+    {
+      id: "prata_masc",
+      nome: "Prata Masculino",
+      jogos: [
+        { id: "JG.PM1", equipeA: "M.CAMICADO I", equipeB: "COOPER LONGWAY", data: "17/JUL", hora: "07:00", fase: "Principal" },
+        { id: "JG.PM2", equipeA: "SOROCABA", equipeB: "M.CAMICADO II", data: "17/JUL", hora: "07:00", fase: "Principal" }
+      ]
+    },
+    {
+      id: "ouro_fem",
+      nome: "Ouro Feminino",
+      jogos: [
+        { id: "JG.OF1", equipeA: "SOROCABA", equipeB: "ACEAS", data: "17/JUL", hora: "11:00", fase: "Principal" },
+        { id: "JG.OF2", equipeA: "M.CAMICADO I", equipeB: "COOPER II", data: "17/JUL", hora: "15:30", fase: "Principal" }
+      ]
+    }
+  ]
+};

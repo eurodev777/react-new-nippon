@@ -13,12 +13,13 @@ import RegulamentoPage from './components/RegulamentoPage';
 import Footer from './components/Footer';
 import { Sponsor, Supporter } from './types';
 import { motion, AnimatePresence } from 'motion/react';
+import RelacaoAtletasPageProps from './components/RelacaoAtletasPageProps';
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = '/src/assets/drone.jpg';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'regulamento'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'regulamento' | 'equipes'>('home');
   const [selectedLogo, setSelectedLogo] = useState<Sponsor | Supporter | null>(null);
 
   // Helper to scroll smoothly to sections
@@ -44,7 +45,7 @@ export default function App() {
 
       <main className="flex-grow">
         <AnimatePresence mode="wait">
-          {currentPage === 'home' ? (
+          {currentPage === 'home' && (
             <motion.div
               key="home"
               initial={{ opacity: 0 }}
@@ -61,18 +62,26 @@ export default function App() {
               {/* Patrocínio and Apoio sections */}
               <Sponsors onSelectItem={handleSelectLogo} />
             </motion.div>
-          ) : (
-            <motion.div
-              key="regulamento"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 15 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white min-h-[80vh]"
-            >
-              <RegulamentoPage onBack={() => setCurrentPage('home')} />
-            </motion.div>
           )}
+          {currentPage === 'regulamento' && (
+        <motion.div key="regulamento" /* ...props do framer motion... */ className="bg-white min-h-[80vh]">
+          <RegulamentoPage onBack={() => setCurrentPage('home')} />
+        </motion.div>
+      )}
+
+      {/* NOVA PÁGINA AQUI */}
+      {currentPage === 'equipes' && (
+        <motion.div 
+          key="equipes"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{ duration: 0.3 }}
+          className="bg-[#FCFAF2] min-h-[80vh]"
+        >
+          <RelacaoAtletasPageProps onBack={() => setCurrentPage('home')} />
+        </motion.div>
+      )}
         </AnimatePresence>
       </main>
 

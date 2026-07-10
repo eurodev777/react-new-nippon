@@ -1,37 +1,25 @@
+// Navbar.tsx - VERSÃO SIMPLIFICADA
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
 import React, { useState } from 'react';
-import { Menu, X, ArrowLeft, BookOpen, Users, Trophy, Heart } from 'lucide-react';
+import { Menu, X, Users, Calendar, ClipboardList } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface NavbarProps {
-  currentPage: 'home' | 'regulamento';
-  setCurrentPage: (page: 'home' | 'regulamento') => void;
-  onScrollToSection: (sectionId: string) => void;
+  currentPage: 'home' | 'equipes' | 'tabelas' | 'regulamento';
+  setCurrentPage: (page: 'home' | 'equipes' | 'tabelas' | 'regulamento') => void;
 }
 
-export default function Navbar({ currentPage, setCurrentPage, onScrollToSection }: NavbarProps) {
+export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (sectionId: string) => {
+  const handlePageChange = (page: 'home' | 'equipes' | 'tabelas' | 'regulamento') => {
     setIsOpen(false);
-    if (currentPage !== 'home') {
-      setCurrentPage('home');
-      // Wait for page transition, then scroll
-      setTimeout(() => {
-        onScrollToSection(sectionId);
-      }, 300);
-    } else {
-      onScrollToSection(sectionId);
-    }
-  };
-
-  const handleRegulamentoClick = () => {
-    setIsOpen(false);
-    setCurrentPage('regulamento');
+    setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -39,12 +27,9 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
     <header id="app-navbar" className="sticky top-0 z-40 w-full border-b border-gold/10 bg-[#FCFAF2]/90 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo Brand */}
+          {/* Logo Brand - clicando volta pra home */}
           <div 
-            onClick={() => {
-              setCurrentPage('home');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            onClick={() => handlePageChange('home')}
             className="flex cursor-pointer items-center space-x-2"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-nippon-red text-white font-serif font-bold text-sm tracking-tighter">
@@ -60,61 +45,55 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {currentPage === 'home' ? (
-              <>
-                <button
-                  onClick={() => handleNavClick('diretoria')}
-                  className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
-                >
-                  <Users className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Nova Direção</span>
-                </button>
-                <button
-                  onClick={() => handleNavClick('patrocinio')}
-                  className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
-                >
-                  <Trophy className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Patrocínio Master</span>
-                </button>
-                <button
-                  onClick={() => handleNavClick('apoio')}
-                  className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
-                >
-                  <Heart className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Patrocínio</span>
-                </button>
-                <button
-                  onClick={() => handleNavClick('expositores')}
-                  className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
-                >
-                  <Heart className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Expositores</span>
-                </button>
-              </>
-            ) : (
-              <button
-                onClick={() => {
-                  setCurrentPage('home');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="group flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-[#c93b2b] transition hover:text-[#c93b2b]/80"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                <span>Voltar ao Início</span>
-              </button>
-            )}
-
+          {/* Desktop Navigation - APENAS 3 BOTÕES */}
+          <nav className="hidden md:flex items-center space-x-2">
+          <button
+              onClick={() => handlePageChange('home')}
+              className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                currentPage === 'home'
+                  ? 'bg-nippon-red text-white shadow-sm'
+                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+              }`}
+            >
+              <Users className="h-3.5 w-3.5" />
+              <span>11° INTERCOLONIAL</span>
+            </button>
+            {/* Botão EQUIPES */}
             <button
-              onClick={handleRegulamentoClick}
+              onClick={() => handlePageChange('equipes')}
+              className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                currentPage === 'equipes'
+                  ? 'bg-nippon-red text-white shadow-sm'
+                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+              }`}
+            >
+              <Users className="h-3.5 w-3.5" />
+              <span>Equipes</span>
+            </button>
+
+            {/* Botão TABELAS */}
+            <button
+              onClick={() => handlePageChange('tabelas')}
+              className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                currentPage === 'tabelas'
+                  ? 'bg-nippon-red text-white shadow-sm'
+                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+              }`}
+            >
+              <Calendar className="h-3.5 w-3.5" />
+              <span>Tabelas</span>
+            </button>
+
+            {/* Botão REGULAMENTO */}
+            <button
+              onClick={() => handlePageChange('regulamento')}
               className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
                 currentPage === 'regulamento'
                   ? 'bg-nippon-red text-white shadow-sm'
                   : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
               }`}
             >
-              <BookOpen className="h-3.5 w-3.5" />
+              <ClipboardList className="h-3.5 w-3.5" />
               <span>Regulamento</span>
             </button>
           </nav>
@@ -133,7 +112,7 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - APENAS 3 BOTÕES */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -143,61 +122,54 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
             className="md:hidden border-t border-gold/10 bg-[#FCFAF2]"
           >
             <div className="space-y-1 px-2 pb-4 pt-2">
-              {currentPage === 'home' ? (
-                <>
-                  <button
-                    onClick={() => handleNavClick('diretoria')}
-                    className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
-                  >
-                    <Users className="h-4 w-4" />
-                    <span>Nova Direção</span>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('patrocinio')}
-                    className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
-                  >
-                    <Trophy className="h-4 w-4" />
-                    <span>Patrocínio Master</span>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('apoio')}
-                    className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
-                  >
-                    <Heart className="h-4 w-4" />
-                    <span>Patrocínio</span>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('expositores')}
-                    className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
-                  >
-                    <Heart className="h-4 w-4" />
-                    <span>Expositores</span>
-                  </button>
-                </>
-              ) : (
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    setCurrentPage('home');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-[#c93b2b] hover:bg-[#c93b2b]/5"
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                  <span>Voltar ao Início</span>
-                </button>
-              )}
-
+            <button
+                onClick={() => handlePageChange('home')}
+                className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
+                  currentPage === 'home'
+                    ? 'bg-nippon-red text-white'
+                    : 'bg-gold/10 text-gold-dark'
+                }`}
+              >
+                <Users className="h-4 w-4" />
+                <span>11º INTERCOLONIAL</span>
+              </button>
+              {/* Botão EQUIPES (Mobile) */}
               <button
-                onClick={handleRegulamentoClick}
+                onClick={() => handlePageChange('equipes')}
+                className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
+                  currentPage === 'equipes'
+                    ? 'bg-nippon-red text-white'
+                    : 'bg-gold/10 text-gold-dark'
+                }`}
+              >
+                <Users className="h-4 w-4" />
+                <span>Equipes</span>
+              </button>
+
+              {/* Botão TABELAS (Mobile) */}
+              <button
+                onClick={() => handlePageChange('tabelas')}
+                className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
+                  currentPage === 'tabelas'
+                    ? 'bg-nippon-red text-white'
+                    : 'bg-gold/10 text-gold-dark'
+                }`}
+              >
+                <Calendar className="h-4 w-4" />
+                <span>Tabelas</span>
+              </button>
+
+              {/* Botão REGULAMENTO (Mobile) */}
+              <button
+                onClick={() => handlePageChange('regulamento')}
                 className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
                   currentPage === 'regulamento'
                     ? 'bg-nippon-red text-white'
                     : 'bg-gold/10 text-gold-dark'
                 }`}
               >
-                <BookOpen className="h-4 w-4" />
-                <span>Regulamento (Pág. Inteira)</span>
+                <ClipboardList className="h-4 w-4" />
+                <span>Regulamento</span>
               </button>
             </div>
           </motion.div>
