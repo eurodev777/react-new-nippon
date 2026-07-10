@@ -31,6 +31,81 @@ import ic from './assets/diretoria/2.jpg'
 import st from './assets/diretoria/3.jpg'
 import tk from './assets/diretoria/4.jpg'
 import rt from './assets/diretoria/5.jpg'
+import acai from './assets/expositores/acai-everest.png'
+import bea from './assets/expositores/bea.png'
+import shimi from './assets/expositores/shimi.png'
+import atomy from './assets/expositores/atomy.png'
+import violet from './assets/expositores/violet.png'
+import comfort from './assets/expositores/comfort.png'
+import alice from './assets/expositores/alice.png'
+import brilho from './assets/expositores/brilho.jpg'
+import longway from './assets/expositores/longway.png'
+import brahma from './assets/expositores/brahma.png'
+
+// Adicione isso ao seu arquivo data.ts (ou onde você guarda SPONSORS e SUPPORTERS)
+
+// 1. Array para a grade principal de Expositores (parte de cima)
+export const EXHIBITORS = [
+  {
+    id: 'exp-acai',
+    name: 'Açaí Everest',
+    logoText: acai, // Substitua pelo caminho correto da sua imagem
+  },
+  {
+    id: 'exp-bea',
+    name: 'Bea Activewear',
+    logoText: bea,
+  },
+  {
+    id: 'exp-shimi',
+    name: 'Shimi Dorayaki House',
+    logoText: shimi,
+  },
+  {
+    id: 'exp-atomy',
+    name: 'Atomy Santo André Oasis',
+    logoText: atomy,
+  },
+  {
+    id: 'exp-violet',
+    name: 'Violet Doces',
+    logoText: violet,
+  },
+  {
+    id: 'exp-comfort',
+    name: 'TG Comfort',
+    logoText: comfort,
+  },
+  {
+    id: 'exp-alice',
+    name: 'Alice Furuno',
+    logoText: alice,
+  },
+  {
+    id: 'exp-brilho',
+    name: 'Brilho Raro',
+    logoText: brilho,
+  },
+];
+
+// 2. Array para os 3 patrocinadores ao lado do logo do Birugumi (parte de baixo)
+export const BIRUGUMI_SPONSORS = [
+  {
+    id: 'biru-longway',
+    name: 'Longway',
+    logoText: longway,
+  },
+  {
+    id: 'biru-brahma',
+    name: 'Mr. Jeff - Chopp Brahma Express',
+    logoText: brahma,
+  },
+  {
+    id: 'biru-dai',
+    name: 'Dai Alimentos',
+    logoText: dai,
+  },
+];
 
 export const SPONSORS = [
   {
