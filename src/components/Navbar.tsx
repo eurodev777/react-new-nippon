@@ -76,14 +76,21 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
                   className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
                 >
                   <Trophy className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Patrocínio</span>
+                  <span>Patrocínio Master</span>
                 </button>
                 <button
                   onClick={() => handleNavClick('apoio')}
                   className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
                 >
                   <Heart className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
-                  <span>Apoio</span>
+                  <span>Patrocínio</span>
+                </button>
+                <button
+                  onClick={() => handleNavClick('expositores')}
+                  className="group flex items-center space-x-1 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-stone-600 transition hover:text-nippon-red"
+                >
+                  <Heart className="h-3.5 w-3.5 text-stone-400 group-hover:text-nippon-red" />
+                  <span>Expositores</span>
                 </button>
               </>
             ) : (
@@ -150,14 +157,21 @@ export default function Navbar({ currentPage, setCurrentPage, onScrollToSection 
                     className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
                   >
                     <Trophy className="h-4 w-4" />
-                    <span>Patrocínio</span>
+                    <span>Patrocínio Master</span>
                   </button>
                   <button
                     onClick={() => handleNavClick('apoio')}
                     className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
                   >
                     <Heart className="h-4 w-4" />
-                    <span>Apoio</span>
+                    <span>Patrocínio</span>
+                  </button>
+                  <button
+                    onClick={() => handleNavClick('expositores')}
+                    className="flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-stone-600 hover:bg-gold/10 hover:text-nippon-red"
+                  >
+                    <Heart className="h-4 w-4" />
+                    <span>Expositores</span>
                   </button>
                 </>
               ) : (
