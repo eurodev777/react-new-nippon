@@ -26,7 +26,7 @@ export default function RegulamentoPage({ onBack }: RegulamentoPageProps) {
           { label: 'Local', text: 'Sede Campestre II - Nippon Sorocaba - União Cultural e Esportiva Nipo Brasileira de Sorocaba (Antiga Estrada de Araçoiaba da Serra, 211, Araçoiaba da Serra - SP).' },
           { label: 'Formato do Torneio', text: 'Equipes (Masculino e Feminino: Sem limite de idade).' },
           { label: 'Quadras Disponibilizadas', text: '8 Quadras de Saibro.' },
-          { label: 'Bolas a serem utilizadas', text: 'Dunlop Australian Open (Oficiais).' },
+          { label: 'Bolas a serem utilizadas', text: 'Prince NX Tour Pro' },
           { label: 'Categorias', text: 'Ouro Masculino, Prata Masculino, Bronze Masculino, Ouro Feminino e Prata Feminino.' },
           { label: 'Datas', text: '17 de Julho de 2026 (Sexta): Início 7:00hs; 18 de Julho de 2026 (Sábado): Início 7:00hs; 19 de Julho de 2026 (Domingo): Início 7:00hs (Finais), com cerimônia de encerramento às 13:30hs.' }
         ]
@@ -86,7 +86,7 @@ export default function RegulamentoPage({ onBack }: RegulamentoPageProps) {
           { label: 'Categoria Prata Masculino (8 equipes)', text: 'Primeira rodada por Sorteio. Vencedores do primeiro confronto disputam Chave Principal e os perdedores disputam Chave Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão promove para Ouro. Piores 2 disputam Bronze na próxima edição.' },
           { label: 'Categoria Bronze Masculino (12 equipes)', text: 'Primeira rodada por Sorteio. Chave com 4 cabeças de chave, que também por sorteio enfrentam vencedores da Primeira Rodada. Perdedores disputam Repescagem junto com perdedores da Primeira Rodada. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão e Vice promovem para Prata. Piores 2 podem ir para Qualifying.' },
           { label: 'Categoria Ouro Feminino (6 equipes)', text: 'Primeira rodada por sorteio (Top 2 anteriores não se enfrentam na rodada 1). Vencedoras disputam Chave Principal (Grupo de 3, Round Robin). Perdedoras disputam Repescagem (Grupo de 3, Round Robin). Top 2 da Principal serão Campeã e Vice. Melhor da Repescagem será Campeã da Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad.' },
-          { label: 'Primeira rodada por Sorteio. Vencedores do primeiro confronto disputam Chave Principal e os perdedores disputam Chave Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão promove para Ouro. Piores 2 podem disputar Qualifying para a próxima edição.' }
+          { label: 'Categoria Prata Feminino (8 equipes)', text: 'Primeira rodada por Sorteio. Vencedores do primeiro confronto disputam Chave Principal e os perdedores disputam Chave Repescagem. Principal: melhor de 3 sets, No-Ad. Repescagem: Set-Pro até 8, No-Ad. Campeão promove para Ouro. Piores 2 podem disputar Qualifying para a próxima edição.' }
         ]
       },
       {
@@ -95,7 +95,7 @@ export default function RegulamentoPage({ onBack }: RegulamentoPageProps) {
         icon: Award,
         items: [
           { label: 'Premiação', text: 'Troféus para as equipes Campeã, Vice-Campeã e Campeã da Repescagem em todas as Categorias.' },
-          { label: 'Taxa de Inscrição', text: 'R$ 350,00 (Trezentos reais) por atleta, com direito ao almoço de encerramento (19 de Julho).' },
+          { label: 'Taxa de Inscrição', text: 'R$ 350,00 (Trezentos e cinquenta reais) por atleta, com direito ao almoço de encerramento (19 de Julho).' },
           { label: 'Direitos da Comissão', text: 'A Comissão se reserva ao direito de alterar o sistema de chaveamento, sistema dos jogos e horários, em caso de alterações no número de duplas participantes ou motivo de força maior.' },
           { label: 'Dúvidas e Penalidades', text: 'Qualquer dúvida sobre a aplicação e interpretação do regulamento, inclusive sobre a aplicação de penalidades, será resolvida pela Comissão Técnica e Disciplinar, cuja decisão será soberana e definitiva.' },
           { label: 'Casos Omissos', text: 'Os casos omissos no presente regulamento serão resolvidos pela Comissão Organizadora.' },
