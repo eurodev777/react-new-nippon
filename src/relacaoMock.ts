@@ -139,7 +139,15 @@ export const relacaoMock = {
         },
         {
           nome: "ACEAS NIKKEY",
-          atletas: [], // Sem atletas listados no PDF
+          atletas: [
+            "Akemi  Masuda (C) ",
+            "Dani Bon",
+            "Irina Tomari",
+            "Juliana Ogata",
+            "Laís Masuda",
+            "Regina Sakamoto",
+            "Sandra Yakabi",
+          ],
         },
         {
           nome: "M.CAMICADO I",
