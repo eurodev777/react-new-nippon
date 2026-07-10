@@ -391,10 +391,10 @@ export const relacaoMock = {
         },
         {
           nome: "NIPPON SOROCABA I",
-          atletas: [
+          atletas: [ 
             "Nelson Tamura (C)",
             "Koji Saito",
-            "Diego Yungh",
+            "Dsvi Aith",
             "Felipe Ito",
             "Anderson Okada",
             "Sergio Takeda",
