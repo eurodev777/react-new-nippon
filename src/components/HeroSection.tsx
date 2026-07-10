@@ -8,6 +8,7 @@ import { MapPin, Calendar, Compass, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import logo  from '../assets/nippon-sorocaba.png';
 import nippon  from '../assets/logo.png';
+import local  from '../assets/drone.jpg';
 
 interface HeroSectionProps {
   aerialImagePath: string;
@@ -215,7 +216,7 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
           <div className="md:col-span-6 flex justify-center">
             <div className="relative rounded-2xl border-4 border-white bg-white p-2 shadow-lg rotate-1 max-w-md w-full">
               <img
-                src={aerialImagePath}
+                src={local}
                 alt="Sede Campestre II Nippon Sorocaba"
                 referrerPolicy="no-referrer"
                 className="rounded-xl object-cover w-full h-72 md:h-80 shadow-inner"
