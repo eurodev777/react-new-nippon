@@ -214,6 +214,7 @@ export const relacaoMock = {
             "Alexandre Marinho",
             "Gustavo Russo",
             "Yuri Nakamishi",
+            "Ricardo Takeda",
           ],
         },
         {
