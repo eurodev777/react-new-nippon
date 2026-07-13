@@ -17,21 +17,25 @@ export default function RelacaoAtletasPage({ onBack }: RelacaoAtletasPageProps) 
   useEffect(() => {
     const fetchRelacao = async () => {
       try {
-        // Simulação da chamada da API
-        // const response = await fetch('https://sua-api.com/endpoint/relacao');
-        // const json = await response.json();
-        // setDados(json);
-        
-        // Usando mock diretamente
-        setDados(relacaoMock);
+        const response = await fetch(
+          "https://sothink.com.br/apinippon/api/v2/nippon/listar?tabela=completo"
+        );
+  
+        if (!response.ok) {
+          throw new Error(`Erro ${response.status}`);
+        }
+  
+        const json = await response.json();
+  
+        setDados(json);
       } catch (error) {
-        console.warn('API falhou, usando dados de mock (fallback).', error);
+        console.warn("API falhou, usando dados de mock (fallback).", error);
         setDados(relacaoMock);
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchRelacao();
   }, []);
 
