@@ -110,9 +110,9 @@ export default function App() {
             </motion.div>
           )}
           {/* admin */}
-          {currentPage === 'admin' && (
+          {/* {currentPage === 'admin' && (
             <RelacaoAtletasAdminPage />
-          )}
+          )} */}
         </AnimatePresence>
       </main>
 
