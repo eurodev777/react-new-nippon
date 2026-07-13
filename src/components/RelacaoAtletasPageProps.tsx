@@ -88,7 +88,7 @@ export default function RelacaoAtletasPage({ onBack }: RelacaoAtletasPageProps) 
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-            {categoria.equipes.map((equipe: any, index: number) => (
+            {categoria?.equipes.map((equipe: any, index: number) => (
               <div key={index} className="flex flex-col">
                 
                 <h3 className="text-[#e31818] font-bold text-center text-sm md:text-[15px] mb-2 uppercase">
@@ -96,8 +96,8 @@ export default function RelacaoAtletasPage({ onBack }: RelacaoAtletasPageProps) 
                 </h3>
                 
                 <div className="border-[1.5px] border-black flex flex-col bg-white min-h-[100px]">
-                  {equipe.atletas.length > 0 ? (
-                    equipe.atletas.map((atleta: string, i: number) => {
+                  {equipe?.atletas.length > 0 ? (
+                    equipe?.atletas.map((atleta: string, i: number) => {
                       const isCaptain = atleta.includes('(C)');
                       
                       return (
