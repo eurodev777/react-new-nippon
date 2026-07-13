@@ -20,6 +20,7 @@ import chave2 from './assets/2.png'
 import chave3 from './assets/3.png'
 import chave4 from './assets/4.png'
 import chave5 from './assets/5.png'
+import RelacaoAtletasAdminPage from './components/RelacaoAtletasAdminPage';
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = '/src/assets/drone.jpg';
@@ -107,6 +108,10 @@ export default function App() {
                 <img src={chave5} />
               </div>
             </motion.div>
+          )}
+          {/* admin */}
+          {currentPage === 'admin' && (
+            <RelacaoAtletasAdminPage />
           )}
         </AnimatePresence>
       </main>

@@ -1,7 +1,6 @@
 // relacaoMock.ts
 
 export const relacaoMock = {
-  // Você pode manter a estrutura com múltiplas categorias
   categorias: [
     {
       titulo: "RELAÇÃO DOS ATLETAS - PRATA FEMININO",
@@ -50,8 +49,6 @@ export const relacaoMock = {
             "Ilda Kunii",
             "Jessica Nieno",
             "Marina Kawakami",
-            "Fabiana Takahashi",
-            "Vanessa Ota",
           ],
         },
         {
@@ -214,7 +211,7 @@ export const relacaoMock = {
             "Alexandre Marinho",
             "Gustavo Russo",
             "Yuri Nakamishi",
-            "Ricardo Takeda",
+            "Guilherme Utiyama",
           ],
         },
         {
@@ -395,7 +392,7 @@ export const relacaoMock = {
           atletas: [ 
             "Nelson Tamura (C)",
             "Koji Saito",
-            "Dsvi Aith",
+            "Davi Aith",
             "Felipe Ito",
             "Anderson Okada",
             "Sergio Takeda",
