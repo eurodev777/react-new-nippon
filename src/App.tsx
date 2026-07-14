@@ -107,6 +107,7 @@ export default function App() {
                 <img src={chave4} />
                 <img src={chave5} />
               </div>
+              {/* <TabelasPage onBack={() => setCurrentPage('home')} /> */}
             </motion.div>
           )}
           {/* admin */}
