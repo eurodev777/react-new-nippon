@@ -21,13 +21,14 @@ import chave3 from "./assets/3.png";
 import chave4 from "./assets/4.png";
 import chave5 from "./assets/5.png";
 import RelacaoAtletasAdminPage from "./components/RelacaoAtletasAdminPage";
+import GalleryFeed from "./components/GalleryFeed";
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = "/src/assets/drone.jpg";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    "home" | "regulamento" | "equipes"
+    "home" | "regulamento" | "equipes" | "galeria"
   >("home");
   const [selectedLogo, setSelectedLogo] = useState<Sponsor | Supporter | null>(
     null
@@ -111,6 +112,21 @@ export default function App() {
               <RelacaoAtletasPageProps onBack={() => setCurrentPage("home")} />
             </motion.div>
           )}
+          
+          {/* NOVA PÁGINA AQUI */}
+          {currentPage === "galeria" && (
+            <motion.div
+              key="galeria"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#FCFAF2] min-h-[80vh]"
+            >
+              <GalleryFeed />
+            </motion.div>
+          )}
+
           {/* NOVA PÁGINA AQUI */}
           {currentPage === "tabelas" && (
             <motion.div

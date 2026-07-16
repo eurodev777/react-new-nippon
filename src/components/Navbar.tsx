@@ -5,31 +5,45 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { Menu, X, Users, Calendar, ClipboardList } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useState } from "react";
+import {
+  Menu,
+  X,
+  Users,
+  Calendar,
+  ClipboardList,
+  GalleryHorizontal,
+} from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 
 interface NavbarProps {
-  currentPage: 'home' | 'equipes' | 'tabelas' | 'regulamento';
-  setCurrentPage: (page: 'home' | 'equipes' | 'tabelas' | 'regulamento') => void;
+  currentPage: "home" | "equipes" | "tabelas" | "regulamento" | "galeria";
+  setCurrentPage: (
+    page: "home" | "equipes" | "tabelas" | "regulamento" | "galeria"
+  ) => void;
 }
 
 export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handlePageChange = (page: 'home' | 'equipes' | 'tabelas' | 'regulamento') => {
+  const handlePageChange = (
+    page: "home" | "equipes" | "tabelas" | "regulamento" | "galeria"
+  ) => {
     setIsOpen(false);
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <header id="app-navbar" className="sticky top-0 z-40 w-full border-b border-gold/10 bg-[#FCFAF2]/90 backdrop-blur-md">
+    <header
+      id="app-navbar"
+      className="sticky top-0 z-40 w-full border-b border-gold/10 bg-[#FCFAF2]/90 backdrop-blur-md"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Brand - clicando volta pra home */}
-          <div 
-            onClick={() => handlePageChange('home')}
+          <div
+            onClick={() => handlePageChange("home")}
             className="flex cursor-pointer items-center space-x-2"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-nippon-red text-white font-serif font-bold text-sm tracking-tighter">
@@ -47,12 +61,12 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
 
           {/* Desktop Navigation - APENAS 3 BOTÕES */}
           <nav className="hidden md:flex items-center space-x-2">
-          <button
-              onClick={() => handlePageChange('home')}
+            <button
+              onClick={() => handlePageChange("home")}
               className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                currentPage === 'home'
-                  ? 'bg-nippon-red text-white shadow-sm'
-                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+                currentPage === "home"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
               }`}
             >
               <Users className="h-3.5 w-3.5" />
@@ -60,11 +74,11 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             </button>
             {/* Botão EQUIPES */}
             <button
-              onClick={() => handlePageChange('equipes')}
+              onClick={() => handlePageChange("equipes")}
               className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                currentPage === 'equipes'
-                  ? 'bg-nippon-red text-white shadow-sm'
-                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+                currentPage === "equipes"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
               }`}
             >
               <Users className="h-3.5 w-3.5" />
@@ -73,24 +87,37 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
 
             {/* Botão TABELAS */}
             <button
-              onClick={() => handlePageChange('tabelas')}
+              onClick={() => handlePageChange("tabelas")}
               className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                currentPage === 'tabelas'
-                  ? 'bg-nippon-red text-white shadow-sm'
-                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+                currentPage === "tabelas"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
               }`}
             >
               <Calendar className="h-3.5 w-3.5" />
               <span>Jogos</span>
             </button>
 
+            {/* Botão TABELAS */}
+            <button
+              onClick={() => handlePageChange("galeria")}
+              className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                currentPage === "galeria"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
+              }`}
+            >
+              <GalleryHorizontal className="h-3.5 w-3.5" />
+              <span>Galeria</span>
+            </button>
+
             {/* Botão REGULAMENTO */}
             <button
-              onClick={() => handlePageChange('regulamento')}
+              onClick={() => handlePageChange("regulamento")}
               className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
-                currentPage === 'regulamento'
-                  ? 'bg-nippon-red text-white shadow-sm'
-                  : 'bg-gold/10 text-gold-dark hover:bg-gold/20'
+                currentPage === "regulamento"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
               }`}
             >
               <ClipboardList className="h-3.5 w-3.5" />
@@ -127,17 +154,17 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-gold/10 bg-[#FCFAF2]"
           >
             <div className="space-y-1 px-2 pb-4 pt-2">
-            <button
-                onClick={() => handlePageChange('home')}
+              <button
+                onClick={() => handlePageChange("home")}
                 className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
-                  currentPage === 'home'
-                    ? 'bg-nippon-red text-white'
-                    : 'bg-gold/10 text-gold-dark'
+                  currentPage === "home"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
                 }`}
               >
                 <Users className="h-4 w-4" />
@@ -145,11 +172,11 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               </button>
               {/* Botão EQUIPES (Mobile) */}
               <button
-                onClick={() => handlePageChange('equipes')}
+                onClick={() => handlePageChange("equipes")}
                 className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
-                  currentPage === 'equipes'
-                    ? 'bg-nippon-red text-white'
-                    : 'bg-gold/10 text-gold-dark'
+                  currentPage === "equipes"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
                 }`}
               >
                 <Users className="h-4 w-4" />
@@ -158,24 +185,24 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
 
               {/* Botão TABELAS (Mobile) */}
               <button
-                onClick={() => handlePageChange('tabelas')}
+                onClick={() => handlePageChange("galeria")}
                 className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
-                  currentPage === 'tabelas'
-                    ? 'bg-nippon-red text-white'
-                    : 'bg-gold/10 text-gold-dark'
+                  currentPage === "galeria"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
                 }`}
               >
-                <Calendar className="h-4 w-4" />
-                <span>Jogos</span>
+                <GalleryHorizontal className="h-4 w-4" />
+                <span>Galeria</span>
               </button>
 
               {/* Botão REGULAMENTO (Mobile) */}
               <button
-                onClick={() => handlePageChange('regulamento')}
+                onClick={() => handlePageChange("regulamento")}
                 className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
-                  currentPage === 'regulamento'
-                    ? 'bg-nippon-red text-white'
-                    : 'bg-gold/10 text-gold-dark'
+                  currentPage === "regulamento"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
                 }`}
               >
                 <ClipboardList className="h-4 w-4" />
