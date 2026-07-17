@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_URL = "http://sothink.com.br/apinippon/api/v2/nipponimages"; // MUDE AQUI
+const API_URL = "https://sothink.com.br/apinippon/api/v2/nipponimages"; // MUDE AQUI
 
 interface ImagemGaleria {
   id: number;
