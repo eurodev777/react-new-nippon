@@ -182,6 +182,18 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                 <Users className="h-4 w-4" />
                 <span>Equipes</span>
               </button>
+              {/* Botão EQUIPES (Mobile) */}
+              <button
+                onClick={() => handlePageChange("tabelas")}
+                className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
+                  currentPage === "tabelas"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
+                }`}
+              >
+                <Users className="h-4 w-4" />
+                <span>Jogos</span>
+              </button>
 
               {/* Botão TABELAS (Mobile) */}
               <button
