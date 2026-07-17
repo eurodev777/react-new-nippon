@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-const API_URL = 'http://sothink.com.br/apinippon/api/v2/nipponimages'; // MUDE AQUI
+const API_URL = "http://sothink.com.br/apinippon/api/v2/nipponimages"; // MUDE AQUI
 
 interface ImagemGaleria {
   id: number;
@@ -40,14 +40,14 @@ export default function GalleryFeed() {
       {/* Feed 4 Colunas - Formato Vertical */}
       <div className="grid grid-cols-4 gap-2 sm:gap-4">
         {imagens.map((item, index) => (
-          <div 
-            key={item.id} 
+          <div
+            key={item.id}
             onClick={() => abrirModal(index)}
             className="cursor-pointer overflow-hidden rounded-xl aspect-[9/16] bg-gray-200 hover:opacity-90 transition-opacity"
           >
-            <img 
-              src={`${API_URL}/${item.imagem}`} 
-              alt="Galeria" 
+            <img
+              src={`http://sothink.com.br/apinippon/${item.imagem}`}
+              alt="Galeria"
               className="w-full h-full object-cover"
             />
           </div>
@@ -56,7 +56,7 @@ export default function GalleryFeed() {
 
       {/* Modal Tela Inteira */}
       {modalAberto && imagens.length > 0 && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center backdrop-blur-sm"
           onClick={() => setModalAberto(false)}
         >
@@ -66,7 +66,7 @@ export default function GalleryFeed() {
           </button>
 
           {/* Botão Anterior */}
-          <button 
+          <button
             onClick={slideAnterior}
             className="absolute left-4 md:left-8 text-white text-5xl font-bold hover:text-gray-300 z-50 p-4"
           >
@@ -74,15 +74,15 @@ export default function GalleryFeed() {
           </button>
 
           {/* Imagem do Slide */}
-          <img 
-            src={`${API_URL}/${imagens[slideAtual].imagem}`}
+          <img
+            src={`http://sothink.com.br/apinippon/${imagens[slideAtual].imagem}`}
             alt="Slide"
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-md"
             onClick={(e) => e.stopPropagation()} // Impede que o clique na imagem feche o modal
           />
 
           {/* Botão Próximo */}
-          <button 
+          <button
             onClick={proximoSlide}
             className="absolute right-4 md:right-8 text-white text-5xl font-bold hover:text-gray-300 z-50 p-4"
           >
