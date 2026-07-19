@@ -8,6 +8,7 @@ import { MapPin, Calendar, Compass, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import logo  from '../assets/nippon-sorocaba.png';
 import nippon  from '../assets/logo.png';
+import insta  from '../assets/instagram.png';
 import local  from '../assets/drone.jpg';
 
 interface HeroSectionProps {
@@ -114,8 +115,12 @@ export default function HeroSection({ aerialImagePath }: HeroSectionProps) {
         {/* Main Grid: Header Layout */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:items-center border-b border-gold/10 pb-10">
           {/* Left: Nippon Sorocaba Tênis Logo */}
-          <div className="flex justify-center md:justify-start">
+          <div className="flex flex-col gap-2 items-center justify-center md:justify-start">
             <img src={logo} />
+            <div className="flex gap-2 items-center">
+            <img width="24" src={insta} />
+              <a href="https://www.instagram.com/nipponsorocabatenis" className="font-bold text-blue-800" target="_blank">@nipponsorocabatenis</a>
+            </div>
           </div>
 
           <img src={nippon} />
