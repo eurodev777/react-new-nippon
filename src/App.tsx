@@ -23,6 +23,7 @@ import chave5 from "./assets/5.png";
 import RelacaoAtletasAdminPage from "./components/RelacaoAtletasAdminPage";
 import GalleryFeed from "./components/GalleryFeed";
 import Resultados from "./components/Resultados";
+import GaleriaCampeoes from "./components/GaleriaCampeoes";
 
 // Exact path from generated image output
 const AERIAL_IMAGE_PATH = "/src/assets/drone.jpg";
@@ -35,7 +36,7 @@ export default function App() {
     null
   );
   const [chaves, setChaves] = useState<any>(null);
-
+1
   useEffect(() => {
     buscarChaves();
   }, []);
@@ -49,6 +50,10 @@ export default function App() {
 
     setChaves(data[0]);
   };
+
+  const handleResults = async () => {
+    setCurrentPage("resultados")
+  }
 
   // Helper to scroll smoothly to sections
   const handleScrollToSection = (sectionId: string) => {
@@ -83,7 +88,7 @@ export default function App() {
             >
               {/* Hero Banner with logos, dates, coordinates & intro */}
               <HeroSection aerialImagePath={AERIAL_IMAGE_PATH} />
-
+              <GaleriaCampeoes onCheckResults={handleResults} />
               {/* Nova Diretoria (New Directorate) Section */}
               <Diretoria />
 
