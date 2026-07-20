@@ -1,6 +1,6 @@
 import React from 'react';
-import feminino from '../assets/2.jpeg'
-import masculino from '../assets/1.jpeg'
+import feminino from '../assets/1.jpeg'
+import masculino from '../assets/2.jpeg'
 
 export default function GaleriaCampeoes({ onCheckResults }) {
   const data = [
