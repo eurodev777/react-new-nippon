@@ -17,9 +17,21 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 
 interface NavbarProps {
-  currentPage: "home" | "equipes" | "tabelas" | "regulamento" | "galeria";
+  currentPage:
+    | "home"
+    | "equipes"
+    | "tabelas"
+    | "regulamento"
+    | "galeria"
+    | "resultados";
   setCurrentPage: (
-    page: "home" | "equipes" | "tabelas" | "regulamento" | "galeria"
+    page:
+      | "home"
+      | "equipes"
+      | "tabelas"
+      | "regulamento"
+      | "galeria"
+      | "resultados"
   ) => void;
 }
 
@@ -27,7 +39,13 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handlePageChange = (
-    page: "home" | "equipes" | "tabelas" | "regulamento" | "galeria"
+    page:
+      | "home"
+      | "equipes"
+      | "tabelas"
+      | "regulamento"
+      | "galeria"
+      | "resultados"
   ) => {
     setIsOpen(false);
     setCurrentPage(page);
@@ -96,6 +114,19 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             >
               <Calendar className="h-3.5 w-3.5" />
               <span>Jogos</span>
+            </button>
+
+            {/* Botão TABELAS */}
+            <button
+              onClick={() => handlePageChange("resultados")}
+              className={`flex items-center space-x-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition ${
+                currentPage === "resultados"
+                  ? "bg-nippon-red text-white shadow-sm"
+                  : "bg-gold/10 text-gold-dark hover:bg-gold/20"
+              }`}
+            >
+              <Calendar className="h-3.5 w-3.5" />
+              <span>Resultados</span>
             </button>
 
             {/* Botão TABELAS */}
@@ -193,6 +224,18 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               >
                 <Users className="h-4 w-4" />
                 <span>Jogos</span>
+              </button>
+
+              <button
+                onClick={() => handlePageChange("resultados")}
+                className={`flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider ${
+                  currentPage === "resultados"
+                    ? "bg-nippon-red text-white"
+                    : "bg-gold/10 text-gold-dark"
+                }`}
+              >
+                <Users className="h-4 w-4" />
+                <span>Resultados</span>
               </button>
 
               {/* Botão TABELAS (Mobile) */}
